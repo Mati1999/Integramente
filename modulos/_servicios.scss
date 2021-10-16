@@ -1,0 +1,100 @@
+@import '../utilidades/variables';
+
+.mainServicios {
+    background: url(../images/cafeYLavanda.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+    display: flex;
+    flex-direction: column;
+    @include medidas(100%, 100%);
+    padding: 2rem;
+
+}
+
+.mainServicios__cantidad,
+.mainServicios__especialidad {
+    @include medidas(100%, 50%);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    & h2 {
+        text-shadow: 2px 2px 2px $gris;
+        color: $blanco;
+    }
+}
+
+
+
+.mainServicios__contenedor1,
+.mainServicios__contenedor2 {
+    height: 100%;
+
+    & .row {
+        @include medidas(100%, 100%);
+    }
+
+    .mainServicios__div {
+        height: 20rem;
+        overflow: hidden;
+        position: relative;
+        border-radius: 1rem;
+        transition: all .3s ease;
+    }
+
+    .mainServicios__div:hover {
+        transform: scale(1.05, 1.05);
+    }
+
+    & h3 {
+        width: 100%;
+        position: absolute;
+        z-index: 200;
+        bottom: 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        color: $casiBlanco;
+        text-align: center;
+        bottom: 0;
+        background: $lavandaOscuroTransparente;
+        margin: 0;
+        transition: all .3s ease;
+    }
+
+    .mainServicios__div:hover>h3 {
+        background: $lavanda1;
+    }
+}
+
+
+
+.mainServicios__div--sesionIndividual {
+    background: url(../images/terapiaIndividual.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--terapiaPareja {
+    background: url(../images/terapiaDePareja.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--terapiaGrupal {
+    background: url(../images/terapiaGrupal.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--terapiaSistemica {
+    background: url(../images/terapiaSistémica.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--neuropsicologia {
+    background: url(../images/neuropsicología.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}
+
+.mainServicios__div--TerapiaCC {
+    background: url(../images/TerapiaCognitivoConductual.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+}

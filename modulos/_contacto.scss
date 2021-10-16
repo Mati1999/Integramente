@@ -1,0 +1,61 @@
+@import '../utilidades/variables';
+@import 'mediaQueries';
+
+.mainContacto {
+    background: url(../images/formulario.jpg);
+    @include background (no-repeat, cover, 50% 50%);
+    @include medidas(100%, 100vh);
+    text-align: center;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainContacto__form {
+    width: 40%;
+    background: $blancoTransparente;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        width: 70%;
+    }
+
+}
+
+
+.mainContacto__datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ;
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    & label,
+    & input {
+        width: 100%;
+    }
+}
+
+.mainContacto__mensaje {
+
+
+    & textarea {
+        width: 100%;
+    }
+}
+
+.mainContacto__botones {
+    display: flex;
+
+    justify-content: space-around;
+}
